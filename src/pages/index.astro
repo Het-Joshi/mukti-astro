@@ -1,0 +1,65 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Features of the Community</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:earth" title="A Vibrant Student Community">
+          Uniting students passionate about Free and Open Source Software (FOSS), cybersecurity, and much more through collaborative projects and innovative exploration.
+        </Feature>
+        <Feature icon="mdi:arrow-projectile-multiple" title="Monthly projects">
+          We make it a point to finish one project every month. These projects may be any of your own ideas implemented with FOSS!
+        </Feature>
+        <Feature icon="mdi:handshake-outline" title="Industry Collaborations">
+          Engage in our activities and events at Mukti, and not only will you benefit from valuable experiences, but you'll also earn certificates from our diverse array of tech-company partners, startups, and communities.
+        </Feature>
+        <Feature icon="mdi:hammer-wrench" title="Hands-on-Learning">
+          Dive in and "get your hands dirty" with practical, hands-on experience—because true learning often happens when you roll up your sleeves and immerse yourself in the challenges at hand.
+        </Feature>
+        <Feature icon="mdi:seat" title="Enriching Events">
+          Participate in our enriching events, where knowledge meets experience, creating dynamic opportunities for learning, collaboration, and personal growth.
+        </Feature>
+        <Feature icon="mdi:language-markdown" title="Markdown & MDX">
+          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
+        </Feature>
+
+      </div>
+    </div>
+  </section>
+  <ContentMedia imgSrc="/accessible-components.webp">
+    <h2>Accessible Components</h2>
+    <p class="text-2xl">
+      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
+      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
+        >separate package</a
+      >. They'll get you up and running in building an accessible solution for your visitors.
+    </p>
+  </ContentMedia>
+  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
+    <h2>WCAG 2.1 AA Compliant</h2>
+    <p class="text-2xl">
+      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
+      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
+      reaching WCAG AA compliance.
+    </p>
+  </ContentMedia>
+  <section class="mt-64 mb-32">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Counters</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <Counter count="500+" title="Members" sub="Pan India" />
+        <Counter count="8" title="Collaborations" sub="with Industry and counting..." />
+        <Counter count="10" title="Commits" sub="Merged" />
+        <Counter count="6+" title="Months" sub="Since launch" />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

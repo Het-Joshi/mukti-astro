@@ -1,0 +1,20 @@
+---
+import CallToAction from './CallToAction.astro'
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer>
+  <CallToAction />
+  <section class="py-8">
+    <div class="container">
+      <center>
+      <p>
+        &copy; {currentYear} - TheMuktiCommunity <br> <a href="https://astro.build/">Astro</a>. Made with a theme by <a
+          href="https://github.com/markteekman">Mark Teekman</a
+        >.
+      </p>
+    </center>
+    </div>
+  </section>
+</footer>
